@@ -1,0 +1,104 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg-derm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b101b" />
+      <stop offset="100%" stop-color="#121826" />
+    </linearGradient>
+    <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg-derm)" />
+
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+  </g>
+
+  <!-- Window Frame -->
+  <rect x="40" y="30" width="720" height="390" rx="16" fill="#111723" stroke="#252f44" stroke-width="1.5" />
+
+  <!-- Titlebar -->
+  <rect x="40" y="30" width="720" height="44" rx="16" fill="#182030" />
+  <rect x="40" y="58" width="720" height="16" fill="#182030" />
+  <circle cx="65" cy="52" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="82" cy="52" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="99" cy="52" r="5" fill="#10b981" opacity="0.8" />
+  <text x="130" y="56" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="600">dermasense.ai // cnn_vision_classifier.py</text>
+  <rect x="620" y="42" width="120" height="20" rx="10" fill="#38bdf8" fill-opacity="0.15" />
+  <text x="636" y="56" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">â— TENSORFLOW</text>
+
+  <!-- Left: Computer Vision Scanner View -->
+  <rect x="65" y="95" width="340" height="300" rx="12" fill="#161f30" stroke="#252f44" stroke-width="1" />
+  
+  <!-- Face scanning bounding box -->
+  <g transform="translate(135, 125)">
+    <!-- Scanner frame corners -->
+    <path d="M 0,30 L 0,0 L 30,0" stroke="#38bdf8" stroke-width="2.5" fill="none" />
+    <path d="M 170,0 L 200,0 L 200,30" stroke="#38bdf8" stroke-width="2.5" fill="none" />
+    <path d="M 200,190 L 200,220 L 170,220" stroke="#38bdf8" stroke-width="2.5" fill="none" />
+    <path d="M 30,220 L 0,220 L 0,190" stroke="#38bdf8" stroke-width="2.5" fill="none" />
+    
+    <!-- Face Silhouette / Mesh Nodes -->
+    <ellipse cx="100" cy="110" rx="65" ry="85" fill="#1e293b" stroke="#334155" stroke-dasharray="3,3" />
+    <ellipse cx="100" cy="95" rx="50" ry="60" fill="none" stroke="#38bdf8" stroke-opacity="0.25" />
+    
+    <!-- Vision Keypoints -->
+    <circle cx="75" cy="85" r="3" fill="#38bdf8" />
+    <circle cx="125" cy="85" r="3" fill="#38bdf8" />
+    <circle cx="100" cy="110" r="3" fill="#38bdf8" />
+    <circle cx="85" cy="140" r="3" fill="#38bdf8" />
+    <circle cx="115" cy="140" r="3" fill="#38bdf8" />
+    <line x1="75" y1="85" x2="125" y2="85" stroke="#38bdf8" stroke-opacity="0.3" />
+    <line x1="75" y1="85" x2="100" y2="110" stroke="#38bdf8" stroke-opacity="0.3" />
+    <line x1="125" y1="85" x2="100" y2="110" stroke="#38bdf8" stroke-opacity="0.3" />
+    <line x1="100" y1="110" x2="85" y2="140" stroke="#38bdf8" stroke-opacity="0.3" />
+    <line x1="100" y1="110" x2="115" y2="140" stroke="#38bdf8" stroke-opacity="0.3" />
+    <line x1="85" y1="140" x2="115" y2="140" stroke="#38bdf8" stroke-opacity="0.3" />
+    
+    <!-- Scan Beam -->
+    <rect x="0" y="70" width="200" height="40" fill="url(#scan-grad)" />
+    <line x1="0" y1="110" x2="200" y2="110" stroke="#38bdf8" stroke-width="1.5" />
+  </g>
+  
+  <text x="235" y="375" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">FACIAL REGION DETECTED (224x224 RGB)</text>
+
+  <!-- Right: Diagnosis & Classification Output -->
+  <rect x="425" y="95" width="315" height="300" rx="12" fill="#161f30" stroke="#252f44" stroke-width="1" />
+  <text x="445" y="125" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Automated Classification</text>
+  <text x="445" y="142" fill="#64748b" font-family="'Inter', sans-serif" font-size="11">CNN Multi-Class Confidence Scores</text>
+
+  <!-- Class 1 -->
+  <text x="445" y="175" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Condition A: Benign / Normal</text>
+  <text x="720" y="175" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="end">98.2%</text>
+  <rect x="445" y="185" width="275" height="8" rx="4" fill="#252f44" />
+  <rect x="445" y="185" width="270" height="8" rx="4" fill="#38bdf8" />
+
+  <!-- Class 2 -->
+  <text x="445" y="215" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Hyperpigmentation Risk</text>
+  <text x="720" y="215" fill="#64748b" font-family="'Inter', sans-serif" font-size="11" text-anchor="end">1.4%</text>
+  <rect x="445" y="225" width="275" height="8" rx="4" fill="#252f44" />
+  <rect x="445" y="225" width="15" height="8" rx="4" fill="#64748b" />
+
+  <!-- Class 3 -->
+  <text x="445" y="255" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Inflammatory Markers</text>
+  <text x="720" y="255" fill="#64748b" font-family="'Inter', sans-serif" font-size="11" text-anchor="end">0.4%</text>
+  <rect x="445" y="265" width="275" height="8" rx="4" fill="#252f44" />
+  <rect x="445" y="265" width="6" height="8" rx="4" fill="#64748b" />
+
+  <!-- Clinical Report Mini Box -->
+  <rect x="445" y="290" width="275" height="90" rx="8" fill="#1b2438" stroke="#2d3b55" stroke-width="1" />
+  <text x="460" y="315" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">âœ“ AI DIAGNOSTIC REPORT GENERATED</text>
+  <text x="460" y="335" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">Synced to Firebase Firestore in real-time</text>
+  <text x="460" y="355" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">TensorFlow CNN &#183; OpenCV Preprocessing &#183; React UI</text>
+</svg>
+

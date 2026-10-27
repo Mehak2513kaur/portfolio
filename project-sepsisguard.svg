@@ -1,0 +1,88 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg-sepsis" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091410" />
+      <stop offset="100%" stop-color="#121f19" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg-sepsis)" />
+
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+  </g>
+
+  <!-- Window Frame -->
+  <rect x="40" y="30" width="720" height="390" rx="16" fill="#0f1c16" stroke="#1d382b" stroke-width="1.5" />
+
+  <!-- Titlebar -->
+  <rect x="40" y="30" width="720" height="44" rx="16" fill="#162920" />
+  <rect x="40" y="58" width="720" height="16" fill="#162920" />
+  <circle cx="65" cy="52" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="82" cy="52" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="99" cy="52" r="5" fill="#10b981" opacity="0.8" />
+  <text x="130" y="56" fill="#86efac" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="600">sepsisguard.ai // clinical_icu_early_warning.py</text>
+  
+  <!-- Hackathon Banner Badge in Titlebar -->
+  <rect x="580" y="40" width="160" height="24" rx="12" fill="url(#gold-grad)" />
+  <text x="660" y="56" fill="#111111" font-family="'Inter', sans-serif" font-size="11" font-weight="900" text-anchor="middle">ðŸ† HACKATHON WINNER</text>
+
+  <!-- Left: ICU Vital Signs Telemetry & Trends -->
+  <rect x="65" y="95" width="375" height="300" rx="12" fill="#13231c" stroke="#1d382b" stroke-width="1" />
+  <text x="85" y="125" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">ICU Vital Time-Series Stream</text>
+  <text x="85" y="142" fill="#64748b" font-family="'Inter', sans-serif" font-size="11">Real-time physiological multi-parameter tracking</text>
+
+  <!-- Vital 1: Heart Rate -->
+  <text x="85" y="172" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Heart Rate (BPM)</text>
+  <text x="420" y="172" fill="#22c55e" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="end">82 bpm Â· Normal</text>
+  <path d="M 85,195 L 140,195 L 150,180 L 160,205 L 170,175 L 180,195 L 230,195 L 240,180 L 250,205 L 260,175 L 270,195 L 340,195 L 350,180 L 360,205 L 370,175 L 380,195 L 420,195" fill="none" stroke="#22c55e" stroke-width="2" />
+
+  <!-- Vital 2: Mean Arterial Pressure -->
+  <text x="85" y="232" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Mean Arterial Pressure (MAP)</text>
+  <text x="420" y="232" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="end">78 mmHg Â· Stable</text>
+  <path d="M 85,255 Q 150,250 200,258 T 320,252 T 420,255" fill="none" stroke="#38bdf8" stroke-width="2" />
+
+  <!-- Vital 3: Body Temp & WBC -->
+  <text x="85" y="292" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Core Temp &amp; Leucocyte Count</text>
+  <text x="420" y="292" fill="#facc15" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="end">37.1Â°C Â· WBC: 7.2k</text>
+  <path d="M 85,315 Q 160,318 240,312 T 360,316 T 420,314" fill="none" stroke="#facc15" stroke-width="2" />
+
+  <!-- Tech tags -->
+  <rect x="85" y="355" width="80" height="22" rx="11" fill="#1b3026" />
+  <text x="125" y="370" fill="#86efac" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Scikit-learn</text>
+  <rect x="175" y="355" width="60" height="22" rx="11" fill="#1b3026" />
+  <text x="205" y="370" fill="#86efac" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Pandas</text>
+  <rect x="245" y="355" width="105" height="22" rx="11" fill="#1b3026" />
+  <text x="297" y="370" fill="#86efac" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">Clinical ML Model</text>
+
+  <!-- Right: Sepsis Early Warning Score Card -->
+  <rect x="460" y="95" width="280" height="185" rx="12" fill="#13231c" stroke="#1d382b" stroke-width="1" />
+  <text x="480" y="125" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Early Warning Score</text>
+  <text x="480" y="142" fill="#64748b" font-family="'Inter', sans-serif" font-size="11">6-Hour Predictive Window</text>
+
+  <!-- Metric -->
+  <text x="480" y="195" fill="#22c55e" font-family="'Inter', sans-serif" font-size="42" font-weight="900">0.08</text>
+  <text x="480" y="215" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Risk Assessment: LOW / STABLE</text>
+  <text x="480" y="235" fill="#64748b" font-family="'Inter', sans-serif" font-size="11">Sensitivity: 96.8% &#183; Specificity: 94.2%</text>
+  <rect x="480" y="250" width="240" height="15" rx="7.5" fill="#22c55e" fill-opacity="0.15" />
+  <text x="600" y="261" fill="#22c55e" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">âœ“ ZERO SEPSIS SIGNS IN 6H</text>
+
+  <!-- Bottom Right Mini Card: Award Banner -->
+  <rect x="460" y="295" width="280" height="100" rx="12" fill="#13231c" stroke="#1d382b" stroke-width="1" />
+  <text x="480" y="322" fill="#fbbf24" font-family="'Inter', sans-serif" font-size="11" font-weight="700">â˜… 1st PRIZE HACKATHON</text>
+  <text x="480" y="342" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="700">Healthcare AI Challenge 2026</text>
+  <text x="480" y="365" fill="#86efac" font-family="'Inter', sans-serif" font-size="11">Life-saving early intervention pipeline</text>
+  <text x="480" y="380" fill="#475569" font-family="'Inter', sans-serif" font-size="10">End-to-End Supervised ML Pipeline</text>
+</svg>
+
